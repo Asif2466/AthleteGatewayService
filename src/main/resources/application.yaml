@@ -4,7 +4,7 @@ spring:
       mvc:
         routes:
           - id: AtheleteCoachService
-            uri: lb://ATHELETECOACHSERVICE
+            uri: lb://ATHLETECOACHSERVICE
             predicates:
               - Path=/api/v1/athlete/**
           - id: AthleteWellnessService
@@ -20,6 +20,7 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
+#    hostname: localhost
   client:
     fetch-registry: true
     register-with-eureka: true
